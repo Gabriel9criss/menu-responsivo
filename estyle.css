@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+  }
+  
+  .menu-button {
+    display: none; /* O botão não é exibido por padrão em telas maiores */
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Estilos para dispositivos móveis */
+  @media screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-button {
+      display: block; /* Mostra o botão em telas menores */
+    }
+  
+    nav {
+      display: none; /* Oculta o menu de navegação por padrão em telas menores */
+      width: 100%;
+    }
+  
+    nav.show {
+      display: flex; /* Exibe o menu de navegação quando a classe 'show' é adicionada */
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav li {
+      margin: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
